@@ -1,0 +1,123 @@
+﻿@{
+    ViewData["Title"] = "First";
+    Layout = "_Layout";
+}
+
+<style>
+    body {
+        background-color: darkorange;
+        background-size: cover;
+        background-position: center;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    #hero {
+        text-align: center;
+        padding: 100px 0;
+    }
+
+        #hero h2 {
+            color: white;
+            font-size: 48px; /* Increased font size */
+            font-weight: bold; /* Added bold font weight */
+            letter-spacing: 2px; /* Added letter spacing for thicker appearance */
+            text-transform: uppercase; /* Converted text to uppercase for emphasis */
+        }
+
+        #hero p {
+            color: white;
+            font-size: 20px; /* Adjusted font size */
+            margin-top: 20px; /* Added margin-top for spacing */
+        }
+
+        #hero .btn {
+            color: white;
+            background-color: #3c8dbc;
+            border: none;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            margin-top: 20px; /* Added margin-top for spacing */
+            display: inline-block; /* Ensure button displays inline */
+        }
+
+            #hero .btn:hover {
+                background-color: #2a6496;
+            }
+
+    section {
+        padding: 60px 0;
+        text-align: center;
+    }
+
+        section h2 {
+            font-size: 36px; /* Adjusted font size */
+            margin-bottom: 30px;
+            font-weight: bold; /* Added bold font weight */
+            text-transform: uppercase; /* Converted text to uppercase for emphasis */
+        }
+
+        section p {
+            color: white;
+            font-size: 18px; /* Adjusted font size */
+            line-height: 1.6; /* Increased line height for readability */
+        }
+
+        section ul {
+            list-style: none; /* Removed bullet points */
+            padding: 0;
+        }
+
+            section ul li {
+                margin-bottom: 10px; /* Added margin-bottom for spacing */
+            }
+
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+    }
+</style>
+
+<section id="hero">
+    <div class="container">
+        <h2>Welcome to Voxtron</h2>
+        <p>We provide innovative solutions for your business needs.</p>
+    </div>
+</section>
+
+<section id="about">
+    <div class="container">
+        <h2>About Us</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac justo vitae dolor sagittis venenatis.</p>
+    </div>
+</section>
+
+<section id="services">
+    <div class="container">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Service 1</li>
+            <li>Service 2</li>
+            <li>Service 3</li>
+        </ul>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p>Email: info@company.com</p>
+        <p>Phone: +1234567890</p>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Company Name. All rights reserved.</p>
+    </div>
+</footer>

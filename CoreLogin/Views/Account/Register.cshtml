@@ -1,0 +1,91 @@
+﻿@model CoreLogin.Models.RegisterViewModel
+
+@{
+    ViewData["Title"] = "Register";
+    Layout = "_Layout1"; // Assuming your layout file is named "_Layout.cshtml"
+}
+<style>
+    body {
+        background-color: darkorange;
+    }
+
+    .container-box {
+        background-color: white;
+        border-radius: 2px;
+        padding: 12px; /* Reduced padding */
+        margin-top: 25px;
+        width: 58%; /* Set the width to 80% */
+        margin-left: auto; /* Center the container horizontally */
+        margin-right: auto; /* Center the container horizontally */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    h1.text-center {
+        font-size: 36px; /* Increase font size */
+        font-weight: bold; /* Increase font thickness */
+        margin-bottom: 20px; /* Add space below the heading */
+        color: black; /* Set heading text color to darkorange */
+    }
+
+    .form-control {
+        border: 3px solid black; /* Set border color to black with 3px width */
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 20px; /* Add margin to separate form fields */
+    }
+
+        .form-control,
+        .form-control::placeholder {
+            color: darkorange; /* Set text color to darkorange */
+        }
+
+    ::placeholder {
+        opacity: 1; /* Ensure placeholder text is fully visible */
+    }
+
+    .text-danger {
+        color: black; /* Set validation message color to black */
+    }
+
+    .btn-register {
+        background-color: #000;
+        border: 2px solid #000;
+        color: darkorange;
+    }
+</style>
+
+<div class="container container-box">
+    <h1 class="text-center">Join With Us...</h1>
+    <form asp-action="Register" method="post">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <!-- Center the columns -->
+                <div class="mb-3">
+                    <input asp-for="Username" class="form-control form-control-lg" placeholder="Enter Username" style="border: 2px solid #000;" />
+                    <span asp-validation-for="Username" style="color: black;"></span>
+                </div>
+                <div class="mb-3">
+                    <input asp-for="MobileNumber" class="form-control form-control-lg" placeholder="Enter Mobile Number" style="border: 2px solid #000;" />
+                    <span asp-validation-for="MobileNumber" style="color: black;"></span>
+                </div>
+                <div class="mb-3">
+                    <input asp-for="Email" class="form-control form-control-lg" placeholder="Enter Email" style="border: 2px solid #000;" />
+                    <span asp-validation-for="Email" style="color: black;"></span>
+                </div>
+                <div class="mb-3">
+                    <input asp-for="Password" type="password" class="form-control form-control-lg" placeholder="Enter Password" style="border: 2px solid #000;" />
+                    <span asp-validation-for="Password" style="color: black;"></span>
+                </div>
+                <div class="mb-3">
+                    <input asp-for="Position" class="form-control form-control-lg" placeholder="Enter Position" style="border: 2px solid #000;" />
+                    <span asp-validation-for="Position" style="color: black;"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <button type="submit" class="btn btn-register btn-lg">Register</button>
+            </div>
+        </div>
+    </form>
+</div>

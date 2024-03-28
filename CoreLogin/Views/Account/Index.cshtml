@@ -1,0 +1,72 @@
+﻿@model List<CoreLogin.Models.User>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_Layout2"; // Assuming your layout file is named "_Layout.cshtml"
+}
+
+@section Scripts {
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#userTable').DataTable();
+        });
+    </script>
+}
+
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card" style="border: 3px solid darkorange;">
+        <div class="card-body">
+            <h1 class="card-title text-center mb-4" style="color: #333;">Welcome to the Dashboard!</h1>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Recent Activity</h5>
+                            <!-- Display recent activity or any relevant information -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Notifications</h5>
+                            <!-- Display notifications or any relevant information -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GridView for displaying data -->
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <table id="userTable" class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Mobile</th>
+                                <th>Position</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.Id</td>
+                                    <td>@item.Username</td>
+                                    <td>@item.Email</td>
+                                    <td>@item.PhoneNumber</td>
+                                    <td>@item.Position</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

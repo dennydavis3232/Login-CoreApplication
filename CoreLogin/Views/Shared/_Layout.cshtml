@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CoreLogin</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CoreLogin.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-rOpD4hpb2Saw841y1ZoZoQaTo9JyA/9FAA98d1Cebjh6WC3Pua66jFhP0nPTVDrb5gDlH5sXaX+lb3oynKZWJw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .navbar {
+            border-bottom: 2px solid darkorange; /* Set border color of navbar to dark orange */
+        }
+
+        .navbar-nav .nav-link {
+            color: white !important; /* Change link color to white */
+            font-family: Arial, sans-serif; /* Standard font family */
+            font-weight: bold; /* Use bold font */
+            padding: 10px 20px; /* Add padding for better spacing */
+            border: 2px solid transparent; /* Add border with transparent color */
+            transition: border-color 0.3s; /* Smooth transition for border color */
+        }
+
+            .navbar-nav .nav-link:hover {
+                border-color: white; /* Change border color on hover */
+                text-decoration: none; /* Remove underline on hover */
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light" style="background-color: ThreeDDarkShadow; color: white;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="~/Vox-logo.png" alt="IRIS Image" style="width: 75px; height: 32px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1 justify-content-end">
+                       @*  <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+                        </li> *@
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Account" asp-action="Register">Register</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
